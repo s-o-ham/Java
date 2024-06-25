@@ -4,28 +4,31 @@ On the other hand Python is a dynamically typed language.
 
 ### Variables
 In Java, variables are containers used to store data values. Every variable must be declared with a data type before it can be used. Variables in Java can be classified into several types based on their scope, lifecycle, and usage
-- Local Variables: Defined within methods, constructors, or blocks
+- #### Local Variables:
+  Defined within methods, constructors, or blocks
   ```
   public void exampleMethod()
   {
     int x = 10; // Local variable 'x'
     // Other statements
   }
-  
-- Instance Variables (Non-Static Fields): Defined within a class but outside any method, constructor, or block.
+  ```
+- #### Instance Variables (Non-Static Fields):
+  Defined within a class but outside any method, constructor, or block.
   ```
   public class Example {
     int instanceVariable; // Instance variable 'instanceVariable'
     // Other fields and methods
   }
-
-- Class Variables (Static Fields): Declared with the static keyword within a class, outside any method, constructor, or block.
+  ```
+- #### Class Variables (Static Fields):
+  Declared with the static keyword within a class, outside any method, constructor, or block.
   ```
   public class Example {
     static int classVariable; // Class variable 'classVariable'
     // Other fields and methods
   }
-
+  ```
 #### Condition for variable name
 - **Valid Characters:**
 Variable names can consist of letters (uppercase or lowercase), digits, and underscores (_).
@@ -133,7 +136,7 @@ class Test
 
 
 ### Scope of a Variables
-#### Member Variables (Class level scope)
+- #### Member Variables (Class level scope)
 
 |Access Specifiers|Package|Subclass|World|
 |------|------|------|------|
@@ -144,4 +147,70 @@ class Test
 
 All variables defined directly inside a class are member variables.Can be accessed anywhere in the class.
 
-#### Local Variables (Method level scope)
+- #### Local Variables (Method level scope)
+Local variables are variables declared inside a method, constructor, or block. They are only accessible within that method, constructor, or block. 
+
+- #### Loop Variable (Block Scope)
+A variable declared inside pair of brackets "{" and "}" in a method has scope within the brackets only.
+
+### Note:
+- *'this'* keyword is a reference variable that refers to the current object instance.
+- In java the name of the variable of the inner and outer loop must be different
+- Invalid Syntax:
+  ```
+  class Test
+  {
+    public static void main(String args[])
+    {
+        {
+            int x = 5;
+            {
+                int x = 10;
+                System.out.println(x);
+            }
+        }
+    }
+  }
+  ```
+  
+  Output:
+  ```
+  ./Test.java:9: error: variable x is already defined in method main(String[])  
+                int x = 10;
+                    ^
+                  1 error
+  ```
+  
+  
+- Valid Syntax
+  ```
+  class Test
+  {
+    public static void main(String args[])
+    {
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i);
+        }
+        int i = 20;
+        System.out.println(i);
+    }
+  }
+  ```
+  Output :
+  ```
+  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+  10
+  20
+  ```
+
+### Convert Integer to String:
+    int a = 5;
+    String ans = String.valueOf(a);
