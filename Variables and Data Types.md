@@ -1,0 +1,147 @@
+## Variables and Data Types
+Java is a statically Typed Language i.e., it is a language where the data type of a variable needs to be declared before initializing the value.
+On the other hand Python is a dynamically typed language.
+
+### Variables
+In Java, variables are containers used to store data values. Every variable must be declared with a data type before it can be used. Variables in Java can be classified into several types based on their scope, lifecycle, and usage
+- Local Variables: Defined within methods, constructors, or blocks
+  ```
+  public void exampleMethod()
+  {
+    int x = 10; // Local variable 'x'
+    // Other statements
+  }
+  
+- Instance Variables (Non-Static Fields): Defined within a class but outside any method, constructor, or block.
+  ```
+  public class Example {
+    int instanceVariable; // Instance variable 'instanceVariable'
+    // Other fields and methods
+  }
+
+- Class Variables (Static Fields): Declared with the static keyword within a class, outside any method, constructor, or block.
+  ```
+  public class Example {
+    static int classVariable; // Class variable 'classVariable'
+    // Other fields and methods
+  }
+
+#### Condition for variable name
+- **Valid Characters:**
+Variable names can consist of letters (uppercase or lowercase), digits, and underscores (_).
+They must begin with a letter, the dollar sign ($), or an underscore (_).
+
+- **No Reserved Words:**
+Variable names cannot be the same as Java keywords or reserved words (e.g., public, class, int, if, etc.).
+
+- **No Spaces or Special Characters:**
+Variable names cannot contain spaces or special characters like !, @, #, %, etc.
+
+- **Case Sensitivity:**
+Java is case-sensitive, meaning myVariable and myvariable are considered different variables.
+
+- **Length Limitations:**
+There is no specific limit on the length of a variable name, but it's good practice to keep names concise and meaningful.
+
+#### Naming Conventions (Best Practices)
+- **CamelCase:**
+   Use CamelCase for naming variables (firstName, numberOfStudents). This convention starts with a lowercase letter and capitalizes the first letter of each subsequent word within the name.
+
+- **Meaningful Names:**
+   Choose variable names that are descriptive and convey the purpose or intent of the variable (age, firstName, is_valid).
+
+- **Avoid Acronyms and Abbreviations:**
+   Unless widely recognized (URL, HTML), use full words to enhance readability (numberOfStudents instead of numStd).
+
+- **Constants:**
+   Use all uppercase letters for constants (final int MAX_VALUE = 100;). Constants are typically declared using the final keyword and should use underscores to separate words.
+
+### Data Types
+Java provides a rich set of data types to handle various kinds of data. These data types are categorized into two main groups: primitive data types and reference data types.
+
+#### Primitive Data Types: 
+Primitive data types are the most basic data types in Java. They are predefined by the language and named by a reserved keyword. There are eight primitive data types:
+
+<div align="center">
+  
+|Primitive|Size|Ranges|
+|------|------|------|
+|boolean|1 bit|true or false|
+|byte|8 bit|-128 to 127 (or -2<sup>7</sup> to 2<sup>7</sup>-1 )|
+|short|16 bit|-32768 to 32767 (or -2<sup>15</sup> to 2<sup>15</sup>-1 )|
+|int|32 bit|-2147483648 to 2147483647 (or -2<sup>31</sup> to 2<sup>31</sup>-1 )|
+|long|64 bit|-2<sup>63</sup> to 2<sup>63</sup>-1 |
+|float|32 bit|upto 7 decimal digit|
+|double|64 bit|upto 16 decimal digit|
+|char|16 bit|'140000' to '14ffff'|
+
+</div>
+
+#### Example of Primitive data type:
+
+
+```
+
+class Student
+{
+    public static void main(String arg[])
+    {
+          bool isValid = true;
+          byte marks = 90;
+          float pi = 3.14;
+          float div = 15.0f/4.0f;
+          long views = 10000000000;
+          char gender = 'M';
+    }
+}
+```
+#### Non-Primitive Data Types: 
+Non-primitive data types, also known as reference types, are more complex than primitive data types. They include classes, interfaces, arrays, and enumerations. These types do not store the actual value directly instead, they store a reference (memory address) to the object that holds the data.
+They can be classified as,
+- Strings
+- Objects
+- Class
+- Interface
+- Array
+
+**Syntax for Non-Primitive Data Type:**
+```
+class Peak
+{
+    int x;
+    int y;
+}
+class Test
+{
+    public static void main(String args[])
+    {
+        Peak p = new Peak();
+        p.x = 10;
+        p.y = 20;
+        System.out.println(p.x+" "+p.y);
+    }
+}
+```
+
+#### Primitive and Non-Primitive 
+- Non-Primitive Type variables are always *reference* and Primitive are *normal variables*.
+- Memory for Non-Primitive is always allocated on *Heap* and Primitives are allocated on *Stack*.
+- Member of Non-Primitive get *default value* (like int gets 0, boolean gets false etc) and of Primitive we get *compiler error*.
+- Non-primitive types include classes, arrays, and interfaces; primitives are predefined in Java.
+- Primitives have a fixed size; non-primitives' size varies based on the object's data.
+- Primitives cannot be null; non-primitives can be assigned null.
+
+
+### Scope of a Variables
+#### Member Variables (Class level scope)
+
+|Access Specifiers|Package|Subclass|World|
+|------|------|------|------|
+|public|Yes|Yes|Yes|
+|protected|Yes|Yes|No|
+|default(no modifiers)|Yes|No|No|
+|private|No|No|No|
+
+All variables defined directly inside a class are member variables.Can be accessed anywhere in the class.
+
+#### Local Variables (Method level scope)
