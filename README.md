@@ -15,8 +15,8 @@ Advanced Topics: Explore threads, collections, and exception handling to build r
 Hands-On Projects: Apply your knowledge through real-world projects and coding challenges, solidifying your understanding and showcasing your skills.
 
 
-<p>
-  <img src="image.png" alt="Keylogger Image1" width="300" height="450">
-   <img src="image2.png" alt="Keylogger Image2" width="300" height="450">
-   <img src="image3.png" alt="Keylogger Image3" width="300" height="450">
+<p align="center">
+  <img src="image.png" alt="Keylogger Image1" width="300" height="450" style="margin-right: 20px;">
+  <img src="image2.png" alt="Keylogger Image2" width="300" height="450" style="margin-right: 20px;">
+  <img src="image3.png" alt="Keylogger Image3" width="300" height="450">
 </p>
