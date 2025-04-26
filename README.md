@@ -13,3 +13,8 @@ Object-Oriented Programming: Master the principles of OOP, including inheritance
 Advanced Topics: Explore threads, collections, and exception handling to build robust and efficient applications.
 
 Hands-On Projects: Apply your knowledge through real-world projects and coding challenges, solidifying your understanding and showcasing your skills.
+
+
+<p align="center">
+  <img src="image.png" alt="Keylogger Image" width="300" height="450">
+</p>
